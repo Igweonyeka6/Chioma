@@ -22,7 +22,7 @@ jobs:
 
       - name: Unit Tests
         run:
-             mvn -B test --file pom.xml
+             mvn -B test file pom.xml
              # mvn -B test --file src/test
 
       - name: Build the application
