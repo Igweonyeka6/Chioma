@@ -20,10 +20,12 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build ChiomaBlog
-        run: mvn -B package --file pom.xml
-
       - name: Unit Tests
         run:
              mvn -B test --file pom.xml
              mvn -B test --package src/test
+
+      - name: Build the application
+        run: mvn -B package --file pom.xml
+
+     
